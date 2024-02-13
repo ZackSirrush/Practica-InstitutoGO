@@ -1,0 +1,148 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>  
+    
+    <header>
+        <nav>
+            <ul>
+                <li id="menu"><a href="admin.html" id="ref">Menú de administrador</a></li>
+                <li id="menu"><a href="index.html" id="ref">Cerrar sesión</a></li>
+            </ul>      
+        </nav>    
+    </header>  
+
+    <h1>Consultar inscripciones</h1>
+
+    <section>
+        <table>
+            <tr> 
+                <th>Curp</th> <!-- Genera la tabla para insertar la base de datos -->
+                <th>Nombre</th>
+                <th>Apellido paterno</th>
+                <th>Apellido materno</th>
+                <th>Fecha de nacimiento</th>
+                <th>Grado</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Estado</th>
+                <th>Opciones</th>             
+            </tr>
+
+            <?php
+            
+            require 'conexion.php'; //Establece conexión a la BD
+
+            $sql="SELECT * FROM inscripciones"; //Conculta select
+            $result=mysqli_query($conn,$sql);
+
+            while($fila=mysqli_fetch_array($result)){ //Imprime los resultados en la tabla con el formato asignado
+                $curp=$fila['curp'];
+                echo '<tr>';
+                echo '<td>'.$fila['curp'].'</td>'; //Imprime el resultado obtenido de php en html
+                echo '<td>'.$fila['nombre'].'</td>';
+                echo '<td>'.$fila['apaterno'].'</td>';
+                echo '<td>'.$fila['amaterno'].'</td>';
+                echo '<td>'.$fila['fechanac'].'</td>';
+                echo '<td>'.$fila['grado'].'</td>';
+                echo '<td>'.$fila['telefono'].'</td>'; //Repite el proceso hasta imprimir todos los registros
+                echo '<td>'.$fila['correo'].'</td>';
+                echo '<td>'.$fila['estado'].'</td>';
+                echo '<td><a href="editar.php?curp='.$curp.'">Editar</a>&nbsp;<a href="eliminar.php?curp='.$curp.'">Eliminar</a></td>';
+                echo '</tr>'; //Incorpora botones de texto para modificar y eliminar un registro
+            }    
+            ?>
+
+        </table>
+    </section>
+    
+    <footer style="color:aliceblue"> 
+        <br>Alumno: Zack Sirrush
+        <br>Matrícula: X
+        <br>Asignatura: Programación web I
+        <br>Fecha y hora: 06 de febrero 2024
+    </footer>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>  
+    
+    <header>
+        <nav>
+            <ul>
+                <li id="menu"><a href="admin.html" id="ref">Menú de administrador</a></li>
+                <li id="menu"><a href="index.html" id="ref">Cerrar sesión</a></li>
+            </ul>      
+        </nav>    
+    </header>  
+
+    <h1>Consultar inscripciones</h1>
+
+    <section>
+        <table>
+            <tr> 
+                <th>Curp</th> <!-- Genera la tabla para insertar la base de datos -->
+                <th>Nombre</th>
+                <th>Apellido paterno</th>
+                <th>Apellido materno</th>
+                <th>Fecha de nacimiento</th>
+                <th>Grado</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Estado</th>
+                <th>Opciones</th>             
+            </tr>
+
+            <?php
+            
+            require 'conexion.php'; //Establece conexión a la BD
+
+            $sql="SELECT * FROM inscripciones"; //Conculta select
+            $result=mysqli_query($conn,$sql);
+
+            while($fila=mysqli_fetch_array($result)){ //Imprime los resultados en la tabla con el formato asignado
+                $curp=$fila['curp'];
+                echo '<tr>';
+                echo '<td>'.$fila['curp'].'</td>'; //Imprime el resultado obtenido de php en html
+                echo '<td>'.$fila['nombre'].'</td>';
+                echo '<td>'.$fila['apaterno'].'</td>';
+                echo '<td>'.$fila['amaterno'].'</td>';
+                echo '<td>'.$fila['fechanac'].'</td>';
+                echo '<td>'.$fila['grado'].'</td>';
+                echo '<td>'.$fila['telefono'].'</td>'; //Repite el proceso hasta imprimir todos los registros
+                echo '<td>'.$fila['correo'].'</td>';
+                echo '<td>'.$fila['estado'].'</td>';
+                echo '<td><a href="editar.php?curp='.$curp.'">Editar</a>&nbsp;<a href="eliminar.php?curp='.$curp.'">Eliminar</a></td>';
+                echo '</tr>'; //Incorpora botones de texto para modificar y eliminar un registro
+            }    
+            ?>
+
+        </table>
+    </section>
+    
+    <footer style="color:aliceblue"> 
+        <br>Alumno: Zack Sirrush
+        <br>Matrícula: X
+        <br>Asignatura: Programación web I
+        <br>Fecha y hora: 06 de febrero 2024
+    </footer>
+</body>
+
+>>>>>>> 8d2e818da51b76ede411b462ab63804e0b63a099
+</html>

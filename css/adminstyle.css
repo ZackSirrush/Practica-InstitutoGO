@@ -1,0 +1,174 @@
+<<<<<<< HEAD
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-register{
+    width: 500px;
+    background:  rgba(78, 75, 75, 0.548);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.usrimpt{
+    width: 100%;
+    background:  rgba(78, 75, 75, 0.548);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.usrlbl{
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.form-register a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-register a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register .usrbttn{
+    width: 40%;
+    display:inline-block;
+    background: #1f53c5;
+    background-color: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: #ffffff;
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.ok{
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #1e6;
+    color: #fff
+}
+
+.bad{
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #a22;
+    color: #fff
+=======
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-register{
+    width: 500px;
+    background:  rgba(78, 75, 75, 0.548);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.usrimpt{
+    width: 100%;
+    background:  rgba(78, 75, 75, 0.548);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.usrlbl{
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.form-register p{
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.form-register a{
+    color: white;
+    text-decoration: none;
+}
+
+.form-register a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register .usrbttn{
+    width: 40%;
+    display:inline-block;
+    background: #1f53c5;
+    background-color: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: #ffffff;
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.ok{
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #1e6;
+    color: #fff
+}
+
+.bad{
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #a22;
+    color: #fff
+>>>>>>> 8d2e818da51b76ede411b462ab63804e0b63a099
+}

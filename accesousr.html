@@ -1,0 +1,102 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a usuarios</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/adminstyle.css" rel="stylesheet" type="text/css" media="screen" />
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="menu"><a href="index.html" id="ref">Principal</a></li>
+                <li id="menu"><a href="servicios.html" id="ref">Servicios</a></li>
+                <li id="menu"><a href="inscripciones.html" id="ref">Inscripciones</a></li>
+                <li id="menu"><a href="contacto.html" id="ref">Contacto</a></li>
+                <li id="menu"><a href="accesousr.html" id="ref">Acceso a usuarios</a></li>
+            </ul>      
+        </nav>     
+    </header>
+
+    <section class="form-register">
+        <h1>Acceso a usuarios</h1>
+        <form id="formusr" action="login.php" method="post">
+            <label class="usrlbl" for="usuario">Usuario</label>
+            <input class="usrimpt" type="text" id="usuario" name="usuario" required placeholder="Usuario"/>
+            <br><label class="usrlbl" for="pass">Contraseña</label>
+            <input class="usrimpt" type="password" id="password" name="password" required placeholder="Contraseña"/>
+            <br>
+            <br>
+            <br>
+            <input class="usrbttn" type="submit" onclick="validaDatos()" value="Iniciar Sesión" name="iniciar"></input>
+            <br><!--Se lanza el evento "onclic" para qué cuando se haga clic en el botón se muestre un mensaje-->
+            <br>
+            <p>¿Olvidaste tu contraseña?</p><a href="#">haz clic aquí</a>
+        </form>
+    </section>
+
+    <footer style="color:aliceblue"> 
+        <br>Alumno: Zack Sirrush
+        <br>Matrícula: X
+        <br>Asignatura: Programación web I
+        <br>Fecha y hora: 06 de febrero 2024
+    </footer>
+    <script src="js/login.js"></script>
+    </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso a usuarios</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="css/adminstyle.css" rel="stylesheet" type="text/css" media="screen" />
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="menu"><a href="index.html" id="ref">Principal</a></li>
+                <li id="menu"><a href="servicios.html" id="ref">Servicios</a></li>
+                <li id="menu"><a href="inscripciones.html" id="ref">Inscripciones</a></li>
+                <li id="menu"><a href="contacto.html" id="ref">Contacto</a></li>
+                <li id="menu"><a href="accesousr.html" id="ref">Acceso a usuarios</a></li>
+            </ul>      
+        </nav>     
+    </header>
+
+    <section class="form-register">
+        <h1>Acceso a usuarios</h1>
+        <form id="formusr" action="login.php" method="post">
+            <label class="usrlbl" for="usuario">Usuario</label>
+            <input class="usrimpt" type="text" id="usuario" name="usuario" required placeholder="Usuario"/>
+            <br><label class="usrlbl" for="pass">Contraseña</label>
+            <input class="usrimpt" type="password" id="password" name="password" required placeholder="Contraseña"/>
+            <br>
+            <br>
+            <br>
+            <input class="usrbttn" type="submit" onclick="validaDatos()" value="Iniciar Sesión" name="iniciar"></input>
+            <br><!--Se lanza el evento "onclic" para qué cuando se haga clic en el botón se muestre un mensaje-->
+            <br>
+            <p>¿Olvidaste tu contraseña?</p><a href="#">haz clic aquí</a>
+        </form>
+    </section>
+
+    <footer style="color:aliceblue"> 
+        <br>Alumno: Zack Sirrush
+        <br>Matrícula: X
+        <br>Asignatura: Programación web I
+        <br>Fecha y hora: 06 de febrero 2024
+    </footer>
+    <script src="js/login.js"></script>
+    </body>
+>>>>>>> 8d2e818da51b76ede411b462ab63804e0b63a099
+</html>

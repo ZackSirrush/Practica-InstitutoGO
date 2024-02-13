@@ -1,0 +1,260 @@
+<<<<<<< HEAD
+body{
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(78, 75, 75, 0.548);
+    line-height: 30px;
+    text-align: center;
+}
+
+#menu{
+    width: 90px;
+    display: inline-block;
+    height: 40px;
+}
+
+#ref{
+    text-decoration: none;
+    color:aliceblue;
+    display: block;
+}
+
+#adm{
+    text-decoration: none;
+    color:aliceblue;
+    display: block;
+}
+
+a:hover{
+    background: #070338e7;
+}
+
+html{
+    background-color: #070338e7;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, li{
+    color:aliceblue;
+}
+
+h1{
+    text-align: center;
+}
+
+table{
+    background-color: white;
+    text-align: center;
+    width: 100%;
+}
+
+table, th, td {
+    border:1px solid black
+}
+
+table th, td{
+    color: black;
+}
+
+form{
+    text-align: center;
+}
+
+footer{
+    text-align: left;
+}
+
+img{
+    margin: auto;
+    display: block;
+}
+
+iframe{
+    margin: auto;
+    display: block;
+}
+
+footer{
+    color: aliceblue;
+}
+
+h3{
+    text-align: center;
+}
+
+.filosofia{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    display: block;
+}
+.mision{
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+
+.vision{
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+
+.valores{
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+
+#infomision{ /*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovision{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovalores1{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovalores2{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovalores3{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+=======
+body{
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(78, 75, 75, 0.548);
+    line-height: 30px;
+    text-align: center;
+}
+
+#menu{
+    width: 90px;
+    display: inline-block;
+    height: 40px;
+}
+
+#ref{
+    text-decoration: none;
+    color:aliceblue;
+    display: block;
+}
+
+#adm{
+    text-decoration: none;
+    color:aliceblue;
+    display: block;
+}
+
+a:hover{
+    background: #070338e7;
+}
+
+html{
+    background-color: #070338e7;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, li{
+    color:aliceblue;
+}
+
+h1{
+    text-align: center;
+}
+
+table{
+    background-color: white;
+    text-align: center;
+    width: 100%;
+}
+
+table, th, td {
+    border:1px solid black
+}
+
+table th, td{
+    color: black;
+}
+
+form{
+    text-align: center;
+}
+
+footer{
+    text-align: left;
+}
+
+img{
+    margin: auto;
+    display: block;
+}
+
+iframe{
+    margin: auto;
+    display: block;
+}
+
+footer{
+    color: aliceblue;
+}
+
+h3{
+    text-align: center;
+}
+
+.filosofia{
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    display: block;
+}
+.mision{
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+
+.vision{
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+
+.valores{
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+
+#infomision{ /*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovision{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovalores1{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovalores2{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+}
+#infovalores3{/*Oculta el contenido de los parrafos con ese ID*/
+    display: none;
+>>>>>>> 8d2e818da51b76ede411b462ab63804e0b63a099
+}

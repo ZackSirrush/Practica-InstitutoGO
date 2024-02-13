@@ -1,0 +1,135 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscripciones</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/adminstyle.css" rel="stylesheet" type="text/css" media="screen" />
+        
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li id="menu"><a href="index.html" id="ref">Principal</a></li>
+                    <li id="menu"><a href="servicios.html" id="ref">Servicios</a></li>
+                    <li id="menu"><a href="inscripciones.html" id="ref">Inscripciones</a></li>
+                    <li id="menu"><a href="contacto.html" id="ref">Contacto</a></li>
+                    <li id="menu"><a href="accesousr.html" id="ref">Acceso a usuarios</a></li>
+                </ul>      
+            </nav>     
+        </header>
+
+        <section class="form-register">
+            <h1 id="titulo">Inscripciones</h1>
+            <p>Este formulario permitirá a usted como padre de familia 
+                presentar la solicitud de inscripción de su hijo de 
+                manera online. </p>           
+            <br>
+            <form action="inscrip.php" method="post">
+
+                <label class="usrlbl" for="nombre">Nombre del alumno</label>
+                <input class="usrimpt" type="text" id="nombre" name="nombre" title="Ingresa el nombre del alumno" maxlength="30" placeholder="Nombre" required/>
+                <br><label class="usrlbl" for="apaterno">Apellido Paterno</label>
+                <input class="usrimpt" type="text" id="apaterno" name="apaterno" title="Ingresa el apellido paterno del alumno" maxlength="20" placeholder="Apellido paterno" required/>
+                <br><label class="usrlbl" for="amaterno">Apellido Materno</label>
+                <input class="usrimpt" type="text" id="amaterno" name="amaterno" title="Ingresa el apellido materno del alumno" maxlength="20" placeholder="Apellido materno" required/>
+                <br><label class="usrlbl" for="curp">CURP</label>
+                <input class="usrimpt" type="text" id="curp" name="curp" title="Ingresa el CURP del alumno" minlength="18" maxlength="18" placeholder="CURP" required/> <!-- Minimo y máximo 18 dígitos -->
+                <br><label class="usrlbl" for="fnac">Fecha de nacimiento</label>
+                <input class="usrimpt" type="date" id="fnac" name="fnac" title="Ingresa la fecha de nacimiento del alumno" required/>
+                <br><label class="usrlbl" for="estado">Estado de la república</label>
+                <input class="usrimpt" type="text" id="estado" name="estado" title="Ingresa el Estado de residencia del alumno" maxlength="20" placeholder="Estado de la república" required/>
+                <br><label class="usrlbl" for="grado">Grado escolar a inscribirse</label>
+                <input class="usrimpt" type="number" id="grado" name="grado" title="Ingresa el grado escolar a ingresar del alumno" min="1" max="6" placeholder="Grado escolar" required/> <!-- Número mínimo 1, máximo 6-->
+                <br><label class="usrlbl" for="telefono">Teléfono de contacto</label>
+                <input class="usrimpt" type="number" id="telefono" name="telefono" title="Ingresa un número de contacto" max="9999999999" min="1000000000" placeholder="Máximo diez dígitos" required/>
+                <br><label class="usrlbl" for="correo">Correo electrónico de contacto</label>
+                <input class="usrimpt" type="email" id="correo" name="correo" title="Ingresa un correo electrónico de contacto" maxlength="50" placeholder="Correo electrónico" required/>
+                <br>
+                <br>
+                <br>
+                <button class="usrbttn" type="reset">Cancelar</button>
+                <input class="usrbttn" type="submit" value="Registrar" name="registrar"></input>
+            </form>
+        </section>
+        
+        <footer style="color:aliceblue"> 
+            <br>Alumno: Zack Sirrush
+            <br>Matrícula: X
+            <br>Asignatura: Programación web I
+            <br>Fecha y hora: 06 de febrero 2024
+        </footer>
+    </body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscripciones</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/adminstyle.css" rel="stylesheet" type="text/css" media="screen" />
+        
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li id="menu"><a href="index.html" id="ref">Principal</a></li>
+                    <li id="menu"><a href="servicios.html" id="ref">Servicios</a></li>
+                    <li id="menu"><a href="inscripciones.html" id="ref">Inscripciones</a></li>
+                    <li id="menu"><a href="contacto.html" id="ref">Contacto</a></li>
+                    <li id="menu"><a href="accesousr.html" id="ref">Acceso a usuarios</a></li>
+                </ul>      
+            </nav>     
+        </header>
+
+        <section class="form-register">
+            <h1 id="titulo">Inscripciones</h1>
+            <p>Este formulario permitirá a usted como padre de familia 
+                presentar la solicitud de inscripción de su hijo de 
+                manera online. </p>           
+            <br>
+            <form action="inscrip.php" method="post">
+
+                <label class="usrlbl" for="nombre">Nombre del alumno</label>
+                <input class="usrimpt" type="text" id="nombre" name="nombre" title="Ingresa el nombre del alumno" maxlength="30" placeholder="Nombre" required/>
+                <br><label class="usrlbl" for="apaterno">Apellido Paterno</label>
+                <input class="usrimpt" type="text" id="apaterno" name="apaterno" title="Ingresa el apellido paterno del alumno" maxlength="20" placeholder="Apellido paterno" required/>
+                <br><label class="usrlbl" for="amaterno">Apellido Materno</label>
+                <input class="usrimpt" type="text" id="amaterno" name="amaterno" title="Ingresa el apellido materno del alumno" maxlength="20" placeholder="Apellido materno" required/>
+                <br><label class="usrlbl" for="curp">CURP</label>
+                <input class="usrimpt" type="text" id="curp" name="curp" title="Ingresa el CURP del alumno" minlength="18" maxlength="18" placeholder="CURP" required/> <!-- Minimo y máximo 18 dígitos -->
+                <br><label class="usrlbl" for="fnac">Fecha de nacimiento</label>
+                <input class="usrimpt" type="date" id="fnac" name="fnac" title="Ingresa la fecha de nacimiento del alumno" required/>
+                <br><label class="usrlbl" for="estado">Estado de la república</label>
+                <input class="usrimpt" type="text" id="estado" name="estado" title="Ingresa el Estado de residencia del alumno" maxlength="20" placeholder="Estado de la república" required/>
+                <br><label class="usrlbl" for="grado">Grado escolar a inscribirse</label>
+                <input class="usrimpt" type="number" id="grado" name="grado" title="Ingresa el grado escolar a ingresar del alumno" min="1" max="6" placeholder="Grado escolar" required/> <!-- Número mínimo 1, máximo 6-->
+                <br><label class="usrlbl" for="telefono">Teléfono de contacto</label>
+                <input class="usrimpt" type="number" id="telefono" name="telefono" title="Ingresa un número de contacto" max="9999999999" min="1000000000" placeholder="Máximo diez dígitos" required/>
+                <br><label class="usrlbl" for="correo">Correo electrónico de contacto</label>
+                <input class="usrimpt" type="email" id="correo" name="correo" title="Ingresa un correo electrónico de contacto" maxlength="50" placeholder="Correo electrónico" required/>
+                <br>
+                <br>
+                <br>
+                <button class="usrbttn" type="reset">Cancelar</button>
+                <input class="usrbttn" type="submit" value="Registrar" name="registrar"></input>
+            </form>
+        </section>
+        
+        <footer style="color:aliceblue"> 
+            <br>Alumno: Zack Sirrush
+            <br>Matrícula: X
+            <br>Asignatura: Programación web I
+            <br>Fecha y hora: 06 de febrero 2024
+        </footer>
+    </body>
+</html>
+>>>>>>> 8d2e818da51b76ede411b462ab63804e0b63a099

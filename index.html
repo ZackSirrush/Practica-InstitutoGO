@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instituto Guillermo de Ockkam</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body>   
+        <header>
+            <nav>
+                <ul>
+                    <li id="menu"><a href="index.html" id="ref">Principal</a></li>
+                    <li id="menu"><a href="servicios.html" id="ref">Servicios</a></li>
+                    <li id="menu"><a href="inscripciones.html" id="ref">Inscripciones</a></li>
+                    <li id="menu"><a href="contacto.html" id="ref">Contacto</a></li>
+                    <li id="menu"><a href="accesousr.html" id="ref">Acceso a usuarios</a></li>
+                </ul>      
+            </nav>     
+        </header>
+
+        <h1 id="titulo">Instituto Guillermo de Ockham</h1>
+
+        <section>
+            <h2 id="subtitulo">Nosotros</h2>
+                <p class="texto">La escuela primaria Guillermo de Ockham basa sus principios
+                    de formación en el conocimiento aportado por el filósofo 
+                    del que se lleva el nombre, donde se establece que “la ciencia
+                    es un conocimiento cierto y evidente de algo verdadero”
+                    (Universidad Católica de Argentina, 1990); 
+                    bajo esta premisa, los alumnos se forman con base en la experiencia,
+                    por lo que la institución busca incentivar el desarrollo cognitivo
+                    de los estudiantes a través de sus propias experiencias.
+                </p>
+                <img src="imagenes/Instalaciones.jpg" width="400"/>               
+        </section>
+
+        <section class="filosofia"> <!-- Título de clase para modificar estilos desde style.css -->
+            <div class="mision" onmouseover="mostrarMision()" onmouseout="ocultar()"> <!-- Añade métodos para mostrar contenido -->
+                <h3 id="subtitulo">Misión</h3>
+                    <img  src="imagenes/mision.png" width="200"/>
+                    <p id="infomision">Garantizar una formación de excelencia a los estudiantes para que logren la resolución de problemas incentivando la creatividad y el respeto, además de aportar conocimientos respecto a tecnología y lenguas extranjeras de modo que faciliten su inserción en el campo laboral globalizado.</p>
+            </div>
+            <div class="vision" onmouseover="mostrarVision()" onmouseout="ocultar()"> <!-- Al pasar el mouse sobre el div -->
+                <h3 id="subtitulo">Visión</h3>
+                    <img src="imagenes/vision.png" width="200"/>
+                    <p id="infovision">Contribuir significativamente en la formación de estudiantes en continuo crecimiento, de libertad de pensamiento y capacidades cognitivas que permitan el desarrollo de habilidades potenciales que les permitan acceder a niveles profesionales y a desenvolverse con facilidad en sus entornos sociales.</p>
+            </div>
+            <div class="valores" onmouseover="mostrarValores()" onmouseout="ocultar()"> <!-- Muestra el contenido y al quitar el mouse -->
+                <h3 id="subtitulo">Valores</h3>
+                    <img src="imagenes/valores2.jpg" width="200"/> <!-- Oculta nuevamente el contenido -->
+                    <p id="infovalores1">RESPETO: Para que los estudiantes sean capaces de dirigirse a sus compañeros, docentes y entorno social con armonía y diplomacia.</p>
+                    <p id="infovalores2">RESPONSABILIDAD: Resaltando la importancia de los deberes y obligaciones a los que se encuentran sujetos los alumnos y docentes.</p>
+                    <p id="infovalores3">TOLERANCIA: Para ser capaces de aceptar y empatizar con las ideas que difieren de las nuestras.</p>             
+            </div>
+        </section>
+
+    <footer style="color:aliceblue"> 
+        <br>Alumno: Zack Sirrush
+        <br>Matrícula: X
+        <br>Asignatura: Programación web I
+        <br>Fecha y hora: 06 de febrero 2024
+    </footer>
+        
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

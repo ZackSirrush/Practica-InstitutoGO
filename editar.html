@@ -1,0 +1,332 @@
+<<<<<<< HEAD
+<?php
+    $curp=$_GET['curp']; //Recibe el valor del curp seleccionado
+
+    require 'conexion.php';
+
+    $buscar=mysqli_query($conn,"SELECT * FROM inscripciones WHERE curp='$curp'"); //Consulta sql
+
+    $fila=mysqli_fetch_array($buscar); //Toma los valores donde el curp coincide en la base de datos
+    $nombre=$fila['nombre'];
+    $apaterno=$fila['apaterno'];
+    $amaterno=$fila['amaterno'];
+    $fechanac=$fila['fechanac'];
+    $grado=$fila['grado'];
+    $telefono=$fila['telefono'];
+    $correo=$fila['correo'];
+    $estado=$fila['estado'];
+?>
+
+<!DOCTYPE html> <!-- Retoma el formulario de inscripción y se le realizan cambios -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar registro</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" media="screen" />
+        
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li id="menu"><a href="admin.html" id="ref">Menú de administrador</a></li>
+                    <li id="menu"><a href="consultar.html" id="ref">Consultar registros</a></li>
+                </ul>      
+            </nav>    
+        </header>
+
+        <section class="form-register">
+
+            <h1 id="titulo">Editar registro</h1> <!-- Ahora, en cada input se añade el valor retomado de la consulta php -->
+            
+            <form id="editar" class="editar" action="modificar_registro.php" method="post"><!--modificar_registro.php-->
+
+                <!-- Grupo para el nombre del alumno -->
+                <div class="editar__grupo" id="grupo__nombre">
+                    <label class="usrlbl" for="nombre">Nombre del alumno</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" title="Ingresa el nombre del alumno" maxlength="30" placeholder="Nombre" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark></i>"></i>
+                    </div>
+                    <p class="editar__input-error">El nombre debe contener de 4 a 30 letras, puede incluir acentos</p>                    
+                </div>
+
+                <!-- Grupo para el apellido paterno del alumno -->
+                <div class="editar__grupo" id="grupo__apaterno">
+                    <label class="usrlbl" for="apaterno">Apellido Paterno</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="apaterno" name="apaterno" value="<?php echo $apaterno; ?>" title="Ingresa el apellido paterno del alumno" maxlength="20" placeholder="Apellido paterno" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El apellido paterno debe contener de 4 a 20 letras, puede incluir acentos</p>                    
+                </div>
+
+                <!-- Grupo para el apellido materno del alumno -->
+                <div class="editar__grupo" id="grupo__amaterno">
+                    <label class="usrlbl" for="amaterno">Apellido Materno</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="amaterno" name="amaterno" value="<?php echo $amaterno; ?>" title="Ingresa el apellido materno del alumno" maxlength="20" placeholder="Apellido materno" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El apellido materno debe contener de 4 a 30 letras, puede incluir acentos</p>                    
+                </div>
+
+                <!-- Grupo para CURP del alumno -->
+                <div class="editar__grupo" id="grupo__curp">
+                    <label class="usrlbl" for="curp">CURP</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="curp" name="curp" value="<?php echo $curp; ?>" title="Este dato no es modificable" minlength="18" maxlength="18" placeholder="CURP" required readonly/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El CURP debe contener 18 caractéres</p>                    
+                </div>
+
+                <!-- Grupo para la fecha de nacimiento del alumno -->
+                <div class="editar__grupo" id="grupo__fnac">
+                    <label class="usrlbl" for="fnac">Fecha de nacimiento</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="date" id="fnac" name="fnac" value="<?php echo $fechanac; ?>" title="Ingresa la fecha de nacimiento del alumno" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">La fecha de nacimiento no se encuentra en el formato correcto</p>                    
+                </div>
+
+                <!-- Grupo para el estado de residencia del alumno -->
+                <div class="editar__grupo" id="grupo__estado">
+                    <label class="usrlbl" for="estado">Estado de la república</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="estado" name="estado" value="<?php echo $estado; ?>" title="Ingresa el Estado de residencia del alumno" maxlength="20" placeholder="Estado de la república" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El nombre del estado debe contener de 4 a 20 letras, puede incluir acentos y espacios</p>                    
+                </div>
+
+                <!-- Grupo para el grado escolar del alumno -->
+                <div class="editar__grupo" id="grupo__grado">
+                    <label class="usrlbl" for="grado">Grado escolar a inscribirse</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="number" id="grado" name="grado" value="<?php echo $grado; ?>" title="Ingresa el grado escolar a ingresar del alumno" min="1" max="6" placeholder="Grado escolar" required/> 
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El grado del alumno debe incluir un número menor o igual a 6</p>                    
+                </div>
+
+                <!-- Grupo para el teléfono de contacto del alumno -->
+                <div class="editar__grupo" id="grupo__telefono">
+                    <label class="usrlbl" for="telefono">Teléfono de contacto</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="number" id="telefono" name="telefono" value="<?php echo $telefono; ?>" title="Ingresa un número de contacto" max="9999999999" min="1000000000" placeholder="Máximo diez dígitos" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El teléfono de contacto debe contener 10 dígitos</p>                    
+                </div>
+
+                <!-- Grupo para el correo de contacto del alumno -->
+                <div class="editar__grupo" id="grupo__correo">
+                    <label class="usrlbl" for="correo">Correo electrónico de contacto</label>
+                    <div class="editar__grupo-input">
+                    <input class="usrimpt" type="email" id="correo" name="correo" value="<?php echo $correo; ?>" title="Ingresa un correo electrónico de contacto" maxlength="50" placeholder="Correo electrónico" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El correo debe tener el formato correo@dominio.com</p>                    
+                </div>
+
+                <div class="editar__mensaje" id="editar__mensaje">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: <b>Debe llenar el formulario con los datos solicitados</p>
+                </div>
+
+                <div>
+                    <div class="editar__grupo editar__grupo-btn-cancelar"></div>
+                    <button class="cancelbttn" type="reset">Cancelar</button><!-- El botón cancelar coloca los valores anteriores -->            
+                </div>
+
+                <div>
+                    <div class="editar__grupo editar__grupo-btn-enviar"></div>
+                        <button class="modbttn" type="submit" name="modificar">Modificar</button> <!-- El botón modificar --> 
+                    <p class="editar__mensaje-exito" id="editar__mensaje-exito">Se ha modificado el registro correctamente</p>           
+                </div>
+                
+            </form> <!-- ejecuta el código de modificar registro -->
+
+        </section>
+
+        <script src="js/formulario.js"></script>
+        <script src="https://kit.fontawesome.com/e8b7e951e4.js" crossorigin="anonymous"></script>
+        
+        <footer style="color:aliceblue"> 
+            <br>Alumno: Zack Sirrush
+            <br>Matrícula: X
+            <br>Asignatura: Programación web I
+            <br>Fecha y hora: 06 de febrero 2024
+        </footer>
+    </body>
+=======
+<?php
+    $curp=$_GET['curp']; //Recibe el valor del curp seleccionado
+
+    require 'conexion.php';
+
+    $buscar=mysqli_query($conn,"SELECT * FROM inscripciones WHERE curp='$curp'"); //Consulta sql
+
+    $fila=mysqli_fetch_array($buscar); //Toma los valores donde el curp coincide en la base de datos
+    $nombre=$fila['nombre'];
+    $apaterno=$fila['apaterno'];
+    $amaterno=$fila['amaterno'];
+    $fechanac=$fila['fechanac'];
+    $grado=$fila['grado'];
+    $telefono=$fila['telefono'];
+    $correo=$fila['correo'];
+    $estado=$fila['estado'];
+?>
+
+<!DOCTYPE html> <!-- Retoma el formulario de inscripción y se le realizan cambios -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editar registro</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" media="screen" />
+        
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li id="menu"><a href="admin.html" id="ref">Menú de administrador</a></li>
+                    <li id="menu"><a href="consultar.html" id="ref">Consultar registros</a></li>
+                </ul>      
+            </nav>    
+        </header>
+
+        <section class="form-register">
+
+            <h1 id="titulo">Editar registro</h1> <!-- Ahora, en cada input se añade el valor retomado de la consulta php -->
+            
+            <form id="editar" class="editar" action="modificar_registro.php" method="post"><!--modificar_registro.php-->
+
+                <!-- Grupo para el nombre del alumno -->
+                <div class="editar__grupo" id="grupo__nombre">
+                    <label class="usrlbl" for="nombre">Nombre del alumno</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" title="Ingresa el nombre del alumno" maxlength="30" placeholder="Nombre" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark></i>"></i>
+                    </div>
+                    <p class="editar__input-error">El nombre debe contener de 4 a 30 letras, puede incluir acentos</p>                    
+                </div>
+
+                <!-- Grupo para el apellido paterno del alumno -->
+                <div class="editar__grupo" id="grupo__apaterno">
+                    <label class="usrlbl" for="apaterno">Apellido Paterno</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="apaterno" name="apaterno" value="<?php echo $apaterno; ?>" title="Ingresa el apellido paterno del alumno" maxlength="20" placeholder="Apellido paterno" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El apellido paterno debe contener de 4 a 20 letras, puede incluir acentos</p>                    
+                </div>
+
+                <!-- Grupo para el apellido materno del alumno -->
+                <div class="editar__grupo" id="grupo__amaterno">
+                    <label class="usrlbl" for="amaterno">Apellido Materno</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="amaterno" name="amaterno" value="<?php echo $amaterno; ?>" title="Ingresa el apellido materno del alumno" maxlength="20" placeholder="Apellido materno" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El apellido materno debe contener de 4 a 30 letras, puede incluir acentos</p>                    
+                </div>
+
+                <!-- Grupo para CURP del alumno -->
+                <div class="editar__grupo" id="grupo__curp">
+                    <label class="usrlbl" for="curp">CURP</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="curp" name="curp" value="<?php echo $curp; ?>" title="Este dato no es modificable" minlength="18" maxlength="18" placeholder="CURP" required readonly/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El CURP debe contener 18 caractéres</p>                    
+                </div>
+
+                <!-- Grupo para la fecha de nacimiento del alumno -->
+                <div class="editar__grupo" id="grupo__fnac">
+                    <label class="usrlbl" for="fnac">Fecha de nacimiento</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="date" id="fnac" name="fnac" value="<?php echo $fechanac; ?>" title="Ingresa la fecha de nacimiento del alumno" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">La fecha de nacimiento no se encuentra en el formato correcto</p>                    
+                </div>
+
+                <!-- Grupo para el estado de residencia del alumno -->
+                <div class="editar__grupo" id="grupo__estado">
+                    <label class="usrlbl" for="estado">Estado de la república</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="text" id="estado" name="estado" value="<?php echo $estado; ?>" title="Ingresa el Estado de residencia del alumno" maxlength="20" placeholder="Estado de la república" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El nombre del estado debe contener de 4 a 20 letras, puede incluir acentos y espacios</p>                    
+                </div>
+
+                <!-- Grupo para el grado escolar del alumno -->
+                <div class="editar__grupo" id="grupo__grado">
+                    <label class="usrlbl" for="grado">Grado escolar a inscribirse</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="number" id="grado" name="grado" value="<?php echo $grado; ?>" title="Ingresa el grado escolar a ingresar del alumno" min="1" max="6" placeholder="Grado escolar" required/> 
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El grado del alumno debe incluir un número menor o igual a 6</p>                    
+                </div>
+
+                <!-- Grupo para el teléfono de contacto del alumno -->
+                <div class="editar__grupo" id="grupo__telefono">
+                    <label class="usrlbl" for="telefono">Teléfono de contacto</label>
+                    <div class="editar__grupo-input">
+                        <input class="usrimpt" type="number" id="telefono" name="telefono" value="<?php echo $telefono; ?>" title="Ingresa un número de contacto" max="9999999999" min="1000000000" placeholder="Máximo diez dígitos" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El teléfono de contacto debe contener 10 dígitos</p>                    
+                </div>
+
+                <!-- Grupo para el correo de contacto del alumno -->
+                <div class="editar__grupo" id="grupo__correo">
+                    <label class="usrlbl" for="correo">Correo electrónico de contacto</label>
+                    <div class="editar__grupo-input">
+                    <input class="usrimpt" type="email" id="correo" name="correo" value="<?php echo $correo; ?>" title="Ingresa un correo electrónico de contacto" maxlength="50" placeholder="Correo electrónico" required/>
+                        <i class="editar__validacion-estado fa-solid fa-square-xmark"></i>
+                    </div>
+                    <p class="editar__input-error">El correo debe tener el formato correo@dominio.com</p>                    
+                </div>
+
+                <div class="editar__mensaje" id="editar__mensaje">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i><b> Error: <b>Debe llenar el formulario con los datos solicitados</p>
+                </div>
+
+                <div>
+                    <div class="editar__grupo editar__grupo-btn-cancelar"></div>
+                    <button class="cancelbttn" type="reset">Cancelar</button><!-- El botón cancelar coloca los valores anteriores -->            
+                </div>
+
+                <div>
+                    <div class="editar__grupo editar__grupo-btn-enviar"></div>
+                        <button class="modbttn" type="submit" name="modificar">Modificar</button> <!-- El botón modificar --> 
+                    <p class="editar__mensaje-exito" id="editar__mensaje-exito">Se ha modificado el registro correctamente</p>           
+                </div>
+                
+            </form> <!-- ejecuta el código de modificar registro -->
+
+        </section>
+
+        <script src="js/formulario.js"></script>
+        <script src="https://kit.fontawesome.com/e8b7e951e4.js" crossorigin="anonymous"></script>
+        
+        <footer style="color:aliceblue"> 
+            <br>Alumno: Zack Sirrush
+            <br>Matrícula: X
+            <br>Asignatura: Programación web I
+            <br>Fecha y hora: 06 de febrero 2024
+        </footer>
+    </body>
+>>>>>>> 8d2e818da51b76ede411b462ab63804e0b63a099
+</html>
