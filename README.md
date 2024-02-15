@@ -6,7 +6,7 @@
 
 Este proyecto consistió en el desarrollo de un sitio web para una institución escolar ficticia, el Instituto Guillermo de Ockham. En este repositorio, encontrarás el código fuente y los recursos utilizados para crear el sitio web.
 
-[Más detalles](https://zacksirrush.github.io/Practica-InstitutoGO/)
+[Más detalles](https://zacksirrush.github.io/Portafolio/iguillermo.html)
 
 ## Características
 
